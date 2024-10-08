@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Book Collection</title>
+  <script src="./script.js" defer></script>
+</head>
+<body class="h-lvh">
+  <h1 class="text-3xl font-bold m-3 pt-3">Book Collection</h1>
+  <button class="text-black hover:text-white border border-black hover:bg-black text-sm rounded-lg px-5 py-2.5 text-center me-2 mx-3" id="reveal-form">Add Book</button>
+  <div id="form" class="hidden p-6 bg-white border border-gray-200 rounded-lg shadow m-3">
+    <form action="" class="grid grid-cols-3 gap-1" id="form">
+      <h3 class="font-medium col-span-3 mb-3">Add a new book to your collection!</h3>
+        <label for="title" class="col-span-1">Title: </label>
+        <input type="text" name="title" id="title" class="col-span-2 bg-slate-50 border border-black rounded-md outline-none px-2">
+        <label for="author" class="col-span-1">Author: </label>
+        <input type="text" name="author" id="author" class="col-span-2 bg-slate-50 border border-black rounded-md outline-none px-2">
+        <label for="pages">Pages: </label>
+        <input type="number" name="pages" id="pages" class="col-span-2 bg-slate-50 border border-black rounded-md outline-none px-2">
+        <span class="col-span-1">Book read?</span>
+        <div class="col-start-2 col-span-2 flex items-center gap-2">
+          <input type="radio" name="read" id="yes" value="1">
+          <label for="yes">Yes</label>
+          <input type="radio" checked name="read" id="no" value="0">
+          <label for="no">No</label>
+        </div>
+        <input type="submit" value="Add Book" class="col-span-3 text-black hover:text-white border border-black hover:bg-black text-sm rounded-lg px-5 py-2.5 text-center mt-3" id="submit">
+    </form>
+  </div>
+  <h1 class="text-xl font-medium m-3">Books in your collection</h1>
+  <div id="book-container">
+  </div>
+</body>
+</html>
