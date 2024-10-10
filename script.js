@@ -1,13 +1,15 @@
-let id = 0;
+class Book {
+  static counter = 0;
 
-function Book(title, author, pages, read) {
-  this.id = id++;
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read
-    ? "Read"
-    : "Not read" 
+  constructor(title, author, pages, read) {
+    this.id = Book.counter++;
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read
+      ? "Read"
+      : "Not read"
+  }
 }
 
 const pp = new Book("Pride and Prejudice", "Jane Austen", 271, false);
